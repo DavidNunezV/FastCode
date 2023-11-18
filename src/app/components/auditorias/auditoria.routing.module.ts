@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../home/crear-cuenta/service/AuthGuard.service';
-import { PqrsComponent } from './pqrs.component';
-import { ReportesComponent } from './reportes/componentReportes';
+import { AuditoriaComponent } from './auditoria.component';
 
 const routes: Routes = [
-  { path: 'pqrs', component: PqrsComponent,canActivate: [AuthGuard] },
-  { path: 'reportes', component: ReportesComponent },
+  { path: 'auditoria', component: AuditoriaComponent,canActivate: [AuthGuard] },
+
 
 ];
 
@@ -14,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PqrsRoutingModule { }
+export class AudiotoriaRoutingModule { }

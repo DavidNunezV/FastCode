@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h2>Reportes de PQRS</h2>
+  <div *ngIf="listaPQRS.length === 0">
+    <p>No hay PQRS registradas.</p>
+  </div>
+  <div *ngFor="let pqrs of listaPQRS" class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ pqrs.tipo }}</h5>
+      <p class="card-text">{{ pqrs.descripcion }}</p>
+      <p class="card-text"><small class="text-muted">Fecha: {{ pqrs.fecha | date:'medium' }}</small></p>
+    </div>
+  </div>
+</div>

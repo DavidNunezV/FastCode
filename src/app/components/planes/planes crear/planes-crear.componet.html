@@ -1,0 +1,23 @@
+<div class="container my-form">
+  <h2 class="form-title">Crear Nueva Membresía</h2>
+  <form #membresiaForm="ngForm" (ngSubmit)="createItem()" class="form-container">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="newItem.nombre" name="nombre" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="precio">Precio:</label>
+      <input type="text" id="precio" [(ngModel)]="newItem.precio" name="precio" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Características:</label>
+      <div *ngFor="let caracteristica of newItem.caracteristicas; let i = index" class="input-group">
+        <input type="text" [(ngModel)]="newItem.caracteristicas[i]" [name]="'caracteristica' + i" class="form-control">
+        <button type="button" (click)="removeCaracteristica(i)" class="btn btn-remove">Eliminar</button>
+      </div>
+      <button type="button" (click)="addCaracteristica()" class="btn btn-add">Añadir Característica</button>
+    </div>
+
+    <button type="submit" class="btn btn-submit" [disabled]="!membresiaForm.form.valid">Crear Membresía</button>
+  </form>
+</div>

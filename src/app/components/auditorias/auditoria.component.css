@@ -1,0 +1,320 @@
+/* Aquí puedes agregar estilos específicos para tu componente de auditoría */
+.container {
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+}
+/* Personaliza el encabezado de la tabla */
+.table thead th {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilos para las filas alternas */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para las filas al pasar el mouse */
+.table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Estilos para la tabla en dispositivos pequeños */
+@media (max-width: 768px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px; /* Ajusta a la altura deseada */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin perder su aspecto */
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333; /* O el color principal de tu marca */
+}
+
+.card-text {
+  color: #666; /* Un color más suave para el texto descriptivo */
+}
+
+.btn-primary {
+  background-color: #0056b3; /* O el color principal de tu marca */
+  border-color: #0056b3; /* O el color principal de tu marca */
+}
+
+.btn-outline-secondary {
+  border-color: #0056b3; /* O el color principal de tu marca */
+  color: #0056b3; /* O el color principal de tu marca */
+}
+
+.btn-outline-secondary:hover {
+  background-color: #0056b3; /* O el color principal de tu marca */
+  color: #fff;
+}
+
+.card-footer {
+  background-color: #f8f9fa; /* Un color suave para el fondo del footer */
+  border-top: 1px solid #eee; /* Una línea sutil para separar el footer */
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Estilos de la introducción */
+.portfolio-intro {
+  text-align: center;
+  padding: 50px;
+  background: #333;
+  color: #fff;
+}
+
+.portfolio-intro h1 {
+  margin-bottom: 10px;
+}
+
+.portfolio-intro p {
+  font-size: 1.1em;
+}
+
+/* Estilos de las tarjetas del portafolio */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  cursor: pointer;
+  padding: 20px;
+  background: #eee;
+  text-align: center;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+/* Estilos del pie de página */
+.portfolio-footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+.card-img-top {
+  width: 100%; /* hace que la imagen sea tan ancha como su contenedor */
+  height: 200px; /* altura fija */
+  object-fit: cover; /* asegura que la imagen cubra el área sin perder su aspecto */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 600px) {
+  .portfolio {
+    flex-direction: column;
+  }
+}
+
+
+/* Importa la fuente 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Aplica el gradiente de fondo y la fuente al cuerpo del documento */
+body, html {
+  background: linear-gradient(135deg, #000000, #00416a);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos para la introducción */
+.intro {
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: inherit; /* Usa el gradiente del fondo del cuerpo */
+  color: white; /* Texto en blanco */
+}
+
+/* Estilos para los títulos dentro de .intro */
+.intro h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el botón */
+.btn {
+  background-color: #0056b3; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0093E9; /* Color de fondo del botón al pasar el mouse */
+}
+
+/* Asegúrate de que los estilos personalizados anteriores siguen aplicándose */
+/* ... */
+
+.site-footer {
+  background-color: #0A192F;
+  color: #8892B0;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.footer-inner {
+  /* Estilos adicionales si es necesario */
+}
+
+.footer-top {
+  padding-bottom: 3rem;
+}
+
+.footer-column {
+  margin-bottom: 2rem;
+}
+
+.footer-column h3 {
+  color: #CCD6F6;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li a {
+  color: #8892B0;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links li a:hover {
+  color: #64FFDA;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: #8892B0;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #64FFDA;
+}
+
+.social-icon i {
+  font-size: 1.5rem; /* Ajusta el tamaño de los íconos */
+}
+
+.footer-bottom {
+  border-top: 1px solid #233554;
+  padding-top: 2rem;
+}
+
+.footer-bottom p {
+  color: #8892B0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+
+
+
+
+
+/* Estilos para la sección de bienvenida al portafolio */
+.portfolio-welcome {
+  background: #3e506448; /* Un color que combine con tu esquema de diseño */
+  margin-bottom: 4rem; /* Espacio antes de las tarjetas de portafolio */
+}
+
+.portfolio-welcome h2 {
+  font-size: 2.5rem; /* Tamaño grande para el título */
+  margin-bottom: 1rem; /* Espacio debajo del título */
+}
+
+.portfolio-welcome p {
+  font-size: 1.2rem; /* Un tamaño legible para la descripción */
+}

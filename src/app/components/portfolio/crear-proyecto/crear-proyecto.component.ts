@@ -17,6 +17,6 @@ export class ProyectoComponent {
 
   createItem(newItem: PortfolioItem) {
     this.portfolioService.addPortfolioItem(newItem);
-    this.router.navigate(['/portafolio']); // Redirige a la lista de proyectos
+    this.router.navigate(['/portafolioadmin']); // Redirige a la lista de proyectos
   }
 }

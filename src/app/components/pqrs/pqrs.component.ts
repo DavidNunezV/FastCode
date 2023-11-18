@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { PqrsService } from './servicios/pqrs.service';
 
 interface PQRS {
   tipo: string;
@@ -11,22 +12,22 @@ interface PQRS {
   templateUrl: './pqrs.component.html',
   styleUrls: ['./pqrs.component.css']
 })
-export class PqrsComponent implements OnInit {
-  listaPQRS: PQRS[] = [];
+export class PqrsComponent {
+  tipo: string = '';
+  descripcion: string = '';
 
-  constructor() { }
+  constructor(private pqrsService: PqrsService) { }
 
-  ngOnInit(): void {
-    // Aquí puedes cargar PQRS existentes si es necesario
-  }
-
-  enviarPQRS(tipo: string, descripcion: string) {
-    const nuevaPQRS: PQRS = {
-      tipo,
-      descripcion,
+  enviarPQRS() {
+    const nuevoPQRS: PQRS = {
+      tipo: this.tipo,
+      descripcion: this.descripcion,
       fecha: new Date()
     };
-    this.listaPQRS.push(nuevaPQRS);
-    // Aquí puedes agregar lógica para enviar la PQRS a un servidor o API
+
+    this.pqrsService.agregarPQRS(nuevoPQRS);
+    // Restablece el formulario
+    this.tipo = '';
+    this.descripcion = '';
   }
 }

@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PqrsComponent } from './pqrs.component';
 import { PqrsRoutingModule } from './pqrs.routing.module';
-PqrsRoutingModule
+import { ReportesComponent } from './reportes/componentReportes';
+
 
 
 
 
 @NgModule({
-  declarations: [PqrsComponent],
+  declarations: [PqrsComponent,ReportesComponent],
   imports: [CommonModule, PqrsRoutingModule,FormsModule,],
   exports: [PqrsComponent]
 })
-export class QuienesModule { }
+export class PqrsModule { }
