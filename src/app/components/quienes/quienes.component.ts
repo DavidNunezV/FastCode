@@ -18,25 +18,22 @@ export class QuienesComponent {
       name: 'Camilo Guerrero',
       description: 'En plena formación en Tecnología en Sistemas, Camilo fusiona su amor por lo digital con un enfoque práctico y analítico, persiguiendo constantemente avances y soluciones vanguardistas en el mundo tecnológico.',
       imageUrl: 'assets/p1.jpg',
-      showDescription: false
+      expanded: false
 
     },
     {
       name: 'Kevin Agudelo',
       description: 'En plena formación en Tecnología en Sistemas, Kevin fusiona su amor por lo digital con un enfoque práctico y analítico, persiguiendo constantemente avances y soluciones vanguardistas en el mundo tecnológico.',
       imageUrl: 'assets/p4.jpg',
-      showDescription: false
+      expanded: false
 
     },
     {
       name: 'David Núñez',
       description: 'Estudiante de Tecnología en Sistemas, David es un apasionado del mundo digital con un enfoque analítico, siempre buscando soluciones innovadoras en el ámbito tecnológico.',
       imageUrl: 'assets/p3.jpg',
-      showDescription: false
+            expanded: false
 
     }
   ];
-  toggleDescription(index: number) {
-    this.teamMembers[index].showDescription = !this.teamMembers[index].showDescription;
-  }
 }
