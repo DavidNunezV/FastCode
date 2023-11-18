@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Cuenta - Mi Empresa</title>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Estilos personalizados aquí -->
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center mb-4">Crear Cuenta</h2>
+      <form [formGroup]="registroForm" (ngSubmit)="onSubmit()" novalidate>
+        <!-- Nombre -->
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Ingresa tu nombre" required>
+          <!-- Validaciones -->
+          <div *ngIf="registroForm.get('nombre')?.invalid && (registroForm.get('nombre')?.dirty || registroForm.get('nombre')?.touched)" class="alert alert-danger mt-2">
+            <div *ngIf="registroForm.get('nombre')?.errors?.['required']">El nombre es obligatorio.</div>
+            <div *ngIf="registroForm.get('nombre')?.errors?.['minlength']">El nombre debe tener al menos 3 caracteres.</div>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" formControlName="email" placeholder="Ingresa tu email" required>
+          <!-- Validaciones -->
+          <div *ngIf="registroForm.get('email')?.invalid && (registroForm.get('email')?.dirty || registroForm.get('email')?.touched)" class="alert alert-danger mt-2">
+            <div *ngIf="registroForm.get('email')?.errors?.['required']">El email es obligatorio.</div>
+            <div *ngIf="registroForm.get('email')?.errors?.['email']">Debe ser un email válido.</div>
+          </div>
+        </div>
+        <!-- Contraseña -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" formControlName="password" placeholder="Ingresa tu contraseña" required>
+          <!-- Validaciones -->
+          <div *ngIf="registroForm.get('password')?.invalid && (registroForm.get('password')?.dirty || registroForm.get('password')?.touched)" class="alert alert-danger mt-2">
+            <div *ngIf="registroForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</div>
+            <div *ngIf="registroForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</div>
+          </div>
+        </div>
+        <!-- Confirmar Contraseña -->
+        <div class="mb-3">
+          <label for="confirmarPassword" class="form-label">Confirmar Contraseña</label>
+          <input type="password" class="form-control" id="confirmarPassword" formControlName="confirmarPassword" placeholder="Confirma tu contraseña" required>
+          <!-- Validaciones -->
+          <div *ngIf="registroForm.errors?.['mismatch'] && (registroForm.get('confirmarPassword')?.dirty || registroForm.get('confirmarPassword')?.touched)" class="alert alert-danger mt-2">
+            Las contraseñas no coinciden.
+          </div>
+        </div>
+        <!-- Botón de registro -->
+        <button type="submit" class="btn btn-primary w-100" [disabled]="!registroForm.valid">Registrarse</button>
+        <!-- Enlace para volver al inicio de sesión -->
+        <a href="" class="btn btn-link w-100 mt-3">¿Ya tienes cuenta? Inicia sesión</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

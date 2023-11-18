@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+.site-footer {
+  background-color: #0A192F;
+  color: #8892B0;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.footer-inner {
+  /* Estilos adicionales si es necesario */
+}
+
+.footer-top {
+  padding-bottom: 3rem;
+}
+
+.footer-column {
+  margin-bottom: 2rem;
+}
+
+.footer-column h3 {
+  color: #CCD6F6;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li a {
+  color: #8892B0;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links li a:hover {
+  color: #64FFDA;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: #8892B0;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #64FFDA;
+}
+
+.social-icon i {
+  font-size: 1.5rem; /* Ajusta el tamaño de los íconos */
+}
+
+.footer-bottom {
+  border-top: 1px solid #233554;
+  padding-top: 2rem;
+}
+
+.footer-bottom p {
+  color: #8892B0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}

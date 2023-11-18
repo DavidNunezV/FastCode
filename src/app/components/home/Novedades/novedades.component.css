@@ -1,0 +1,290 @@
+/* Estilos base */
+/* Estilos base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #000000, #00416a); /* Gradiente de negro a azul */
+  color: white; /* Texto general más claro para mejor visibilidad */
+  height: 100%;
+  min-height: 100vh; /* Asegura que el gradiente cubra toda la altura visible */
+}
+
+
+.novedades-container {
+  margin: 0 auto; /* Solo centrado verticalmente */
+  padding: 40px 40px;
+  padding-top: 80px; /* Añade más espacio en la parte superior */
+}
+
+/* Asegúrate de importar una fuente de Google Fonts o cualquier otra fuente moderna en tu HTML o CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.intro {
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative; /* Para efectos de pseudo-elementos */
+  overflow: hidden; /* Asegura que los pseudo-elementos no sobresalgan */
+}
+
+/* Estilo para los títulos dentro de .intro */
+.intro h1 {
+  font-family: 'Poppins', sans-serif; /* Fuente moderna */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2.5rem; /* Tamaño más grande para más impacto */
+  text-transform: uppercase; /* Texto en mayúsculas para un look más limpio */
+  letter-spacing: 1px; /* Espaciado entre letras para un estilo más refinado */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil para profundidad */
+  position: relative; /* Para efectos de capas */
+  z-index: 1; /* Asegura que el texto esté sobre los pseudo-elementos */
+}
+
+/* Efectos de brillo o destello para el título */
+.intro h1::before,
+.intro h1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%; /* Ancho grande para un efecto de destello */
+  height: 200%; /* Altura grande para un efecto de destello */
+  transform: translate(-50%, -50%) rotate(45deg); /* Centrado y rotación */
+  background: rgba(255, 255, 255, 0.1); /* Color de destello sutil */
+  animation: shine 5s linear infinite; /* Animación de brillo */
+  z-index: 0; /* Debajo del texto */
+}
+
+/* Animación de brillo */
+@keyframes shine {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) translateX(-300%);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.3); /* Brillo más intenso en el medio */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg) translateX(300%);
+    background: rgba(255, 255, 255, 0); /* Desvanecimiento del brillo */
+  }
+}
+
+/* Asegúrate de que el resto de tu CSS esté intacto */
+
+
+/* Títulos de secciones con un toque más amigable */
+h1, h2 {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Características con tarjetas estilizadas y menos formales */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  background: #ffffff; /* Fondo de las tarjetas blanco */
+  color: #333; /* Texto de las tarjetas negro */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border-top: 4px solid #0056b3; /* Borde superior en azul para un toque de color */
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Textos y enlaces con un estilo más relajado */
+p {
+  color: #666; /* Texto más oscuro para mejor contraste */
+  line-height: 1.6; /* Espaciado de línea para mejor lectura */
+}
+
+a {
+  color: #0056b3; /* Enlaces en azul FastCode */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #0093E9; /* Azul más claro al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* Estilos adicionales para botones o elementos interactivos */
+.btn {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0093E9;
+}
+
+/* Sección de historia con un fondo claro y texto oscuro para contraste */
+.history-section {
+  padding: 50px 0;
+  background-color: #f8f9fa; /* Un fondo claro para la sección de historia */
+  color: #333; /* Texto oscuro para contraste */
+}
+
+.history-section h2 {
+  color: #0056b3; /* Color azul de la marca para los títulos */
+  margin-bottom: 20px;
+}
+
+.history-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555; /* Color de texto más suave para la historia */
+}
+
+/* Asegúrate de que las imágenes sean responsivas */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .history-section .col-md-6 {
+    margin-bottom: 30px;
+  }
+}
+
+/* Espaciado y animaciones */
+.novedades-container > section {
+  margin-bottom: 4rem; /* Añade espacio entre las secciones */
+}
+
+.intro, .features, .history-section {
+  padding: 2rem 0; /* Añade padding superior e inferior para cada sección */
+}
+
+.feature {
+  margin-bottom: 2rem; /* Añade espacio entre las características */
+}
+
+.history-section .row > div {
+  margin-bottom: 1rem; /* Añade espacio entre el texto y la imagen en la sección de historia */
+}
+
+@media (min-width: 768px) {
+  .history-section .row > div {
+    margin-bottom: 0; /* Elimina el margen inferior cuando la pantalla es más grande */
+  }
+}
+
+
+/* Asegúrate de que los estilos personalizados anteriores siguen aplicándose */
+
+.site-footer {
+  background-color: #0A192F;
+  color: #8892B0;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.footer-inner {
+  /* Estilos adicionales si es necesario */
+}
+
+.footer-top {
+  padding-bottom: 3rem;
+}
+
+.footer-column {
+  margin-bottom: 2rem;
+}
+
+.footer-column h3 {
+  color: #CCD6F6;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li a {
+  color: #8892B0;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links li a:hover {
+  color: #64FFDA;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-right: 10px;
+  color: #8892B0;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #64FFDA;
+}
+
+.social-icon i {
+  font-size: 1.5rem; /* Ajusta el tamaño de los íconos */
+}
+
+.footer-bottom {
+  border-top: 1px solid #233554;
+  padding-top: 2rem;
+}
+
+.footer-bottom p {
+  color: #8892B0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+.d-block {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.custom-carousel .carousel-item img {
+  max-height: 600px; /* Ajusta esto a la altura que prefieras */
+  width: auto;
+  margin: auto; /* Esto centrará las imágenes si son más pequeñas que el ancho del contenedor */
+}
+
+
+.navbar-nav .fa {
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FastCode - Inicio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">FastCode</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="novedades">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portafolio">Portafolio </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quienes">Quiene Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Membresias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user" *ngIf="currentUserRole === 'user'"></i>
+            <i class="fas fa-user-shield" *ngIf="currentUserRole === 'admin'"></i>
+            {{ currentUserRole | uppercase }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Configuración</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" (click)="logout()">Cerrar Sesión</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<section class="intro" data-aos="zoom-in">
+  <h1>Bienvenidos a FastCode</h1>
+  <p>En FastCode, llevamos la innovación al siguiente nivel con soluciones de software rápidas, confiables y a la vanguardia de la tecnología.</p>
+</section>
+
+<div id="mainCarousel" class="carousel slide custom-carousel" data-ride="carousel" data-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/1.jpg" class="d-block w-100" alt="Imagen 1">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/2.jpg" class="d-block w-100" alt="Imagen 2">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/3.jpg" class="d-block w-100" alt="Imagen 3">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/4.jpg" class="d-block w-100" alt="Imagen 4">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Siguiente</span>
+  </a>
+</div>
+
+
+<!-- Sección de características con iconos -->
+<section class="features py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Característica 1 -->
+      <div class="col-md-4 text-center mb-3">
+        <i class="fas fa-rocket fa-3x"></i>
+        <h3>Innovación Continua</h3>
+        <p>Exploramos constantemente nuevas tecnologías para ofrecer productos innovadores.</p>
+      </div>
+      <!-- Característica 2 -->
+      <div class="col-md-4 text-center mb-3">
+        <i class="fas fa-cogs fa-3x"></i>
+        <h3>Calidad y Rendimiento</h3>
+        <p>Comprometidos con la calidad y el alto rendimiento en cada proyecto.</p>
+      </div>
+      <!-- Característica 3 -->
+      <div class="col-md-4 text-center mb-3">
+        <i class="fas fa-headset fa-3x"></i>
+        <h3>Soporte Excepcional</h3>
+        <p>Un equipo de soporte dedicado para ayudarte en cada paso del camino.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Quiénes Somos con imagen a la izquierda y texto a la derecha -->
+<section class="quienes-somos py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Columna de imagen -->
+      <div class="col-lg-5 mb-3">
+        <img src="assets/intro.jpg" alt="Quiénes Somos" class="img-fluid">
+      </div>
+      <!-- Columna de texto -->
+      <div class="col-lg-5 mb-3">
+        <h2>Quiénes Somos</h2>
+        <p>Somos una empresa dedicada a la innovación y desarrollo de software, comprometidos con ofrecer soluciones tecnológicas de vanguardia y un servicio al cliente excepcional. Nuestro equipo está formado por profesionales apasionados y expertos en su campo, lo que nos permite abordar los desafíos más complejos y entregar resultados que superan las expectativas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-5">Lo que dicen nuestros clientes</h3>
+    <div class="row">
+      <!-- Testimonio 1 -->
+      <div class="col-md-4">
+        <div class="testimonial bg-white p-4 mb-4">
+          <p class="text-muted">"FastCode transformó la manera en que hacemos negocios. Su enfoque innovador y soporte técnico son incomparables."</p>
+          <footer class="blockquote-footer">Juan Pérez, <cite title="Company A">Empresa A</cite></footer>
+        </div>
+      </div>
+      <!-- Testimonio 2 -->
+      <div class="col-md-4">
+        <div class="testimonial bg-white p-4 mb-4">
+          <p class="text-muted">"La atención al detalle y la respuesta rápida de FastCode fueron clave para el éxito de nuestro proyecto."</p>
+          <footer class="blockquote-footer">Ana Gómez, <cite title="Company B">Empresa B</cite></footer>
+        </div>
+      </div>
+      <!-- Testimonio 3 -->
+      <div class="col-md-4">
+        <div class="testimonial bg-white p-4 mb-4">
+          <p class="text-muted">"Gracias a FastCode, hemos podido escalar nuestras operaciones y mejorar nuestra eficiencia."</p>
+          <footer class="blockquote-footer">Carlos López, <cite title="Company C">Empresa C</cite></footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="footer-column col-lg-4 col-md-6">
+            <h3>Sobre FastCode</h3>
+            <p>FastCode es una empresa líder en soluciones de software innovadoras, ayudando a las empresas a alcanzar su máximo potencial.</p>
+          </div>
+          <div class="footer-column col-lg-4 col-md-6">
+            <h3>Enlaces Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Servicios</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-column col-lg-4 col-md-6">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p>&copy; 2023 FastCode. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

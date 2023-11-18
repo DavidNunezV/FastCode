@@ -1,38 +1,76 @@
-/* Asegúrate de que el contenido de la página no se desplace debajo de la barra de navegación */
-body {
-  padding-top: 56px;
-}
-
-/* Centra el texto en la sección de hero */
-.hero h1, .hero p {
+html, body {
+  height: 100%; /* Asegura que el html y body ocupen toda la altura */
   margin: 0;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Fondo degradado */
+  color: #fff; /* Texto blanco para mejor contraste */
 }
-
-/* Añade algo de espacio alrededor del botón en la sección de hero */
-.hero .btn {
-  margin-top: 20px;
-}
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 50vh; /* Ajusta la altura a la mitad de la pantalla */
-  overflow: hidden;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra toda el área sin deformarse */
-}
-
-.hero {
+.container {
+  min-height: 100vh; /* Asegura que el contenedor tenga al menos la altura de la pantalla */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparencia para la tarjeta */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque detrás de la tarjeta */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil para la tarjeta */
+  box-shadow: 0 5px 15px rgba(0,0,0,.5); /* Sombra más pronunciada para la tarjeta */
+}
+.card-body {
+  padding: 2rem;
+}
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparencia para los inputs */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Borde para los inputs */
+  color: #fff; /* Texto blanco para los inputs */
+  border-radius: 20px;
+  padding: 25px 15px;
+  font-size: 16px;
+}
+.form-group label {
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn-primary {
+  background-color: #0056b3;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+.btn-primary:hover {
+  background-color: #003d82;
+}
+.text-danger {
+  font-size: 14px;
 }
 
-/* Agrega estilos modernos y personalizados aquí si es necesario */
+/* Estilos para las características */
+.features i {
+  color: #0056b3; /* Color que combine con tu esquema de diseño */
+}
+
+.features h3 {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Estilos para los testimonios */
+.testimonials {
+  background-color: #f8f9fa; /* Un fondo claro para la sección de testimonios */
+}
+
+.testimonial {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas de testimonios */
+}
+
+.testimonial p {
+  font-style: italic; /* Estilo de fuente para los testimonios */
+}
+
+blockquote footer {
+  font-weight: bold; /* Negrita para el nombre del cliente */
+}
+.custom-carousel .carousel-item img {
+  max-height: 1px; /* Ajusta esto a la altura que prefieras */
+  width: auto;
+  margin: auto; /* Esto centrará las imágenes si son más pequeñas que el ancho del contenedor */
+}

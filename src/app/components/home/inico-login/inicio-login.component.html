@@ -1,0 +1,24 @@
+<!-- Contenedor principal -->
+<div class="home-container">
+  <div class="banner-text">
+    <h1>Bienvenido a <span class="highlight">FastCode</span></h1>
+    <p>La solución rápida y moderna para tus necesidades de desarrollo.</p>
+    <a routerLink="/novedades" class="btn-get-started">Comenzar</a>
+  </div>
+</div>
+
+<!-- Modal de Términos y Condiciones -->
+<div *ngIf="showTermsModal" id="termsModal" class="modal">
+  <div class="modal-content">
+    <h2>Términos y Condiciones</h2>
+    <p>Por favor, lee y acepta los términos y condiciones antes de comenzar a usar nuestro servicio.</p>
+    <!-- Aquí iría el contenido o enlace a los términos y condiciones -->
+    <div class="terms-text">
+      <p>Texto de los términos y condiciones...</p>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-accept" (click)="acceptTerms()">Aceptar</button>
+      <button class="btn-reject" (click)="rejectTerms()">Rechazar</button>
+    </div>
+  </div>
+</div>

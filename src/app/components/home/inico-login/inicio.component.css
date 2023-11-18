@@ -1,0 +1,96 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #00416a);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-text {
+  animation: enterFromLeft 1s ease-out forwards;
+}
+
+@keyframes enterFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.highlight {
+  color: #00c6ff;
+}
+
+.btn-get-started {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #00c6ff;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-get-started:hover {
+  background-color: #00416a;
+  cursor: pointer;
+}
+/* Estilos para el modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Fijo en la pantalla */
+  z-index: 1; /* Encima de todo */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Habilita el scroll si es necesario */
+  background-color: rgb(0,0,0); /* Fondo negro */
+  background-color: rgba(0,0,0,0.4); /* Negro con opacidad */
+}
+
+/* Contenido del modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% desde la parte superior y centrado */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ancho del contenido */
+}
+
+/* Botones del modal */
+.btn-accept, .btn-reject {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-accept {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+
+.btn-reject {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+/* Texto de los términos y condiciones */
+.terms-text {
+  height: 150px; /* Altura fija para el contenedor de texto */
+  overflow-y: scroll; /* Habilita el scroll vertical si el texto es muy largo */
+  margin-bottom: 20px; /* Espacio debajo del texto */
+  border: 1px solid #ccc; /* Borde alrededor del texto */
+  padding: 10px; /* Espaciado interno */
+}

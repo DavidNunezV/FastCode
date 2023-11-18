@@ -1,0 +1,8 @@
+html, body {
+  height: 2000px; /* Asegura que el html y body ocupen toda la altura */
+  margin: 200;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Fondo degradado */
+  color: #fff; /* Texto blanco para mejor contraste */
+}
+
+
