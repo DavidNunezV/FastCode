@@ -5,7 +5,7 @@ import { AuthGuard } from '../home/crear-cuenta/service/AuthGuard.service';
 
 
 const routes: Routes = [
-  { path: 'quienes', component: QuienesComponent,canActivate: [AuthGuard] },
+  { path: 'quienes', component: QuienesComponent },
 
 ];
 

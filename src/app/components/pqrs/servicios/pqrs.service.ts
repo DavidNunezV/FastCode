@@ -19,8 +19,9 @@ export class PqrsService {
     this.listaPQRS.push(pqrs);
   }
 
-
   obtenerPQRS(): PQRS[] {
+    console.log('Obteniendo PQRS');
     return this.listaPQRS;
   }
+
 }

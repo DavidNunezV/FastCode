@@ -6,7 +6,7 @@ import { MembresiaaaaComponent } from './planes crear/planes-crear.comopent';
 
 
 const routes: Routes = [
-  { path: 'membressias', component: MembresiaComponent,canActivate: [AuthGuard] },
+  { path: 'membressias', component: MembresiaComponent },
   { path: 'crear-membresias', component: MembresiaaaaComponent,canActivate: [AuthGuard] },
 
 

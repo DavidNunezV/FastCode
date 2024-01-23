@@ -22,4 +22,3 @@ export class ReportesComponent implements OnInit {
   }
 
 }
-

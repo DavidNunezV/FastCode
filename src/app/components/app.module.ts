@@ -9,10 +9,11 @@ import { ReactiveFormsModule } from '@angular/forms'; // Asegúrate de importar 
 import { PqrsModule } from './pqrs/pqrs.module';
 import { auditoria } from './auditorias/auditoria.module';
 import { PMembresiasModule } from './planes/membresia.module';
+import { PerfilModule } from './user-profile/user.profile.module';
 
 @NgModule({
   imports: [
-    HomeModule,QuienesModule,PortafolioModule,ReactiveFormsModule,PqrsModule,auditoria,PMembresiasModule
+    HomeModule,QuienesModule,PortafolioModule,ReactiveFormsModule,PqrsModule,auditoria,PMembresiasModule,PerfilModule
 
 
   ],
